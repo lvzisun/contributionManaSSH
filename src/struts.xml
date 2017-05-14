@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.custom.i18n.resources" value="message"></constant>
+	<package name="default" namespace="/" extends="struts-default,json-default">
+		<global-results>
+			<result name="input">/error.jsp</result>
+		</global-results>
+		<action name="loginAction" class="userAction" method="login">
+			<result name="success" type="chain">roleAction</result>
+		</action>
+		<action name="roleAction" class="roleAction" method="queryRole">
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	<package name="self" namespace="/" extends="json-default">
+		<global-results>
+			<result name="success">/success.jsp</result>
+			<result name="input">/error.jsp</result>
+		</global-results>
+		<action name="changePassword" class="userAction" method="changePassword">
+		</action>
+		<action name="changeInfo" class="userAction" method="changeInfo">
+		</action>
+		<action name="loadUserAddressInfo" class="userAction" method="queryAUserAddress">
+			<result name="success">/AddressList/view.jsp</result>
+		</action>
+	</package>
+	<package name="addressList" namespace="/" extends="json-default">
+		<action name="loadUserAddress" class="userAction" method="loadUserAddress">
+			<result name="success">/AddressList/index.jsp</result>
+		</action>
+		<action name="queryUserAddress" class="userAction" method="queryUserAddress">
+			<result name="success">/AddressList/index.jsp</result>
+		</action>
+		<action name="loadFriendAddress" class="friendAction" method="loadFriendAddress">
+			<result name="success">/AddressList/index2.jsp</result>
+		</action>
+		<action name="loadFriendAddressInfo" class="friendAction"
+			method="loadAFriendAddress">
+			<result name="success">/AddressList/view.jsp</result>
+		</action>
+		<action name="loadEditAddressInfo" class="friendAction" method="loadAFriendAddress">
+			<result name="success">/AddressList/edit.jsp</result>
+		</action>
+		<action name="updateFriend" class="friendAction" method="updateAFriend">
+			<result name="success">/success.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		<action name="deleteFriend" class="friendAction" method="deleteAFriend">
+			<result name="success">/success.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+	</package>
+	<package name="email" namespace="/" extends="json-default">
+		<action name="loadGiveemail" method="loadGiveemail"
+			class="emailAction">
+			<result name="success">/Email/giveemail.jsp</result>
+		</action>
+		<action name="loadReceiveemail" method="loadReceiveemail"
+			class="emailAction">
+			<result name="success">/Email/receiveemail.jsp</result>
+		</action>
+	</package>
+</struts>    

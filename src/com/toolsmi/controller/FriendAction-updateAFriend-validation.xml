@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE validators PUBLIC
+  		"-//OpenSymphony Group//XWork Validator 1.0.3//EN"
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd">
+<validators>
+	<field name="friend.realname">
+		<field-validator type="regex">
+			<param name="maxLength">20</param>
+			<message>名字必须在${manLength}以下</message>
+		</field-validator>
+	</field>
+		<field name="friend.phone">
+		<field-validator type="regex">
+			<param name="maxLength">11</param>
+			<message>名字必须是${manLength}数字</message>
+		</field-validator>
+	</field>
+</validators>

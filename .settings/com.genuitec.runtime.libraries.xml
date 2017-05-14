@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project adv-config="true">
+  <add-on id="spring.web"/>
+  <container path="com.genuitec.runtime.library/com.genuitec.struts_2.1">
+    <disable name="antlr-2.7.2.jar" type="jar"/>
+    <jar-attrs id="data/2.1/core/struts2-core-2.2.1.jar">
+      <attribute name="javadoc_location" value="http://struts.apache.org/release/2.2.x/struts2-core/apidocs/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="G:\jar\struts-2.1.6-src.zip"/>
+      <attribute name="source_encoding" value="UTF-8"/>
+    </jar-attrs>
+  </container>
+  <container path="com.genuitec.runtime.library/com.genuitec.hibernate_4.1">
+    <jar-attrs id="data/4.1/lib/core/hibernate-core-4.1.4.Final.jar">
+      <attribute name="javadoc_location" value="http://docs.jboss.org/hibernate/orm/4.1/javadocs/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="G:\jar\hibernate-4-sources\hibernate-core-4.1.8.Final-sources.jar"/>
+      <attribute name="source_encoding" value="UTF-8"/>
+    </jar-attrs>
+    <jar-attrs id="data/4.1/lib/core/hibernate-jpa-2.0-api-1.0.1.Final.jar">
+      <attribute name="javadoc_location" value="http://docs.jboss.org/hibernate/orm/4.1/javadocs/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source_encoding" value="UTF-8"/>
+      <attribute name="source-path" value="G:\jar\hibernate-4-sources\hibernate-jpa-2.0-api-1.0.1.Final-sources.jar"/>
+    </jar-attrs>
+  </container>
+  <container path="com.genuitec.runtime.library/com.genuitec.spring_3.1">
+    <jar-attrs id="data/3.1/dist/org.springframework.aop-3.1.1.RELEASE.jar">
+      <attribute name="javadoc_location" value="http://static.springsource.org/spring/docs/3.1.x/javadoc-api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source-path" value="G:\jar\spring-framework-3.2.17.RELEASE.zip"/>
+      <attribute name="source_encoding" value="UTF-8"/>
+    </jar-attrs>
+    <jar-attrs id="data/3.1/dist/org.springframework.context-3.1.1.RELEASE.jar">
+      <attribute name="javadoc_location" value="http://static.springsource.org/spring/docs/3.1.x/javadoc-api/"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source_encoding" value="UTF-8"/>
+      <attribute name="source-path" value="G:\jar\spring-framework-3.2.17.RELEASE.zip"/>
+    </jar-attrs>
+  </container>
+  <container path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v7.0">
+    <jar-attrs id="lib//servlet-api.jar">
+      <attribute name="javadoc_location"/>
+      <attribute name="source-path-root"/>
+      <attribute name="source_encoding" value="UTF-8"/>
+      <attribute name="source-path" value="G:\jar\servlet.zip"/>
+    </jar-attrs>
+  </container>
+</project>
